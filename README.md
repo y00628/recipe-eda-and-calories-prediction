@@ -1,2 +1,2 @@
 # recipe-dataset-analysis
-Project 3 for DSC 80 at UCSD
+Project 3 (EDA) for DSC 80 at UCSD
