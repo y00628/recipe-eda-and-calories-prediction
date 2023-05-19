@@ -1,2 +1,2 @@
 # recipe-dataset-analysis
-Project 3 for DSC 80 at UCSD
+Exploratoy Data Analysis Project for DSC 80 at UCSD
