@@ -137,7 +137,7 @@ Significance Level: 5%
 
 This statistic is reasonable because not only did I want to know if there exists a difference between the 2 disdtributions, I also wanted to know if one has a lower mean than the other.
 
-5% is a common choice for signnificance level.
+5% is a common choice for significance level.
 
 <iframe src="assets/permutation-test-rating-min.html" width=800 height=600 frameBorder=0></iframe>
 
