@@ -18,9 +18,13 @@ I was investigating the correlation between the cooking time and average rating 
 ##### Number of rows: 83782
 
 ##### Relevant Columns: 
+
 minutes: number of minutes it takes to prepare each recipe
+
 calories (#): number of calories for each recipe 
+
 sodium: the amount of sodium used for each recipe 
+
 rating: average rating for each recipe
 
 ---
