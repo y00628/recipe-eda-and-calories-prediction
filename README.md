@@ -26,7 +26,19 @@ rating: average rating for each recipe
 
 ## Cleaning and EDA
 
+### Univariate Analysis
+
 <iframe src="assets/cooking-time-uni.html" width=800 height=600 frameBorder=0></iframe>
+
+As you can see, most of the recipes take no more than 150 minutes to prepare. For the recipes that take no more than 150 minutes to prepare, most of the them take about 20 to 50 minutes to prepare. However, as shown on the graph, some can take as long as 10000000 to 100000000 minutes to prepare.
+
+### Univariate Analysis
+
+<iframe src="assets/calories-min-scatter.html" width=800 height=600 frameBorder=0></iframe>
+
+As you can see, most of the recipes take no more than 150 minutes to prepare. For the recipes that take no more than 150 minutes to prepare, most of the them take about 20 to 50 minutes to prepare. However, as shown on the graph, some can take as long as 10000000 to 100000000 minutes to prepare.
+
+### Aggregate Analysis
 
 | rating_bins   |   (-0.0001, 20.0] |   (20.0, 50.0] |   (50.0, 150.0] |   (150.0, 250.0] |   (250.0, 1000.0] |   (1000.0, 5000.0] |   (5000.0, 10000.0] |   (10000.0, 100000.0] |   (100000.0, 1000000.0] |   (1000000.0, 10000000.0] |
 |:--------------|------------------:|---------------:|----------------:|-----------------:|------------------:|-------------------:|--------------------:|----------------------:|------------------------:|--------------------------:|
