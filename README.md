@@ -1,6 +1,3 @@
-# recipe-dataset-analysis
-Exploratoy Data Analysis Project for DSC 80 at UCSD
-
 # Recipe Dataset Analysis
 
 by Yosen Lin
@@ -31,14 +28,6 @@ rating: average rating for each recipe
 
 <iframe src="assets/cooking-time-uni.html" width=800 height=600 frameBorder=0></iframe>
 
----
-
-## Assessment of Missingness
-
-Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
-
-
-
 | rating_bins   |   (-0.0001, 20.0] |   (20.0, 50.0] |   (50.0, 150.0] |   (150.0, 250.0] |   (250.0, 1000.0] |   (1000.0, 5000.0] |   (5000.0, 10000.0] |   (10000.0, 100000.0] |   (100000.0, 1000000.0] |   (1000000.0, 10000000.0] |
 |:--------------|------------------:|---------------:|----------------:|-----------------:|------------------:|-------------------:|--------------------:|----------------------:|------------------------:|--------------------------:|
 | (-0.001, 1.0] |           400.879 |        395.288 |         551.068 |          418.95  |           462.239 |            457.717 |             760.7   |               nan     |                   nan   |                     nan   |
@@ -49,6 +38,16 @@ Here's what a Markdown table looks like. Note that the code for this table was g
 | nan           |           453.324 |        432.27  |         610.069 |          598.55  |           621.055 |            871.246 |             223.967 |               574.578 |                    75.2 |                     nan   |
 
 ---
+
+---
+
+## Assessment of Missingness
+
+Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
+
+
+
+
 
 ## Hypothesis Testing
 
