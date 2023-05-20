@@ -8,7 +8,6 @@ by Yosen Lin
 
 ## Introduction
 
-In this project, we studied the effectiveness of spice challenges in building team morale.
 The data that I have access to is a subset of the raw data used in the original report, containing only the recipes and reviews posted since 2008, since the original data is quite large.
 
 RAW_recipes.csv contains the recipes, while RAW_interactions.csv contains the reviews.
