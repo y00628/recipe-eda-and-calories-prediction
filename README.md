@@ -2,7 +2,7 @@
 
 by Yosen Lin
 
-***Note***: Exploratoy Data Analysis Project for DSC 80 at UCSD
+***Note***: Exploratory Data Analysis Project for DSC 80 at UCSD
 
 ---
 
@@ -66,6 +66,8 @@ Note: Recipes that take more than 500000 minutes to prepare or has more than 500
 
 ### Aggregate Analysis
 
+The table below shows the average calories for different cooking time and rating intervals. This table can be used as a source to explore if the average cooking time and the rating has anything to do with the number of calories of a recipe.
+
 | rating_bins   |   (-0.0001, 20.0] |   (20.0, 50.0] |   (50.0, 150.0] |   (150.0, 250.0] |   (250.0, 1000.0] |   (1000.0, 5000.0] |   (5000.0, 10000.0] |   (10000.0, 100000.0] |   (100000.0, 1000000.0] |   (1000000.0, 10000000.0] |
 |:--------------|------------------:|---------------:|----------------:|-----------------:|------------------:|-------------------:|--------------------:|----------------------:|------------------------:|--------------------------:|
 | (-0.001, 1.0] |           400.879 |        395.288 |         551.068 |          418.95  |           462.239 |            457.717 |             760.7   |               nan     |                   nan   |                     nan   |
@@ -77,7 +79,7 @@ Note: Recipes that take more than 500000 minutes to prepare or has more than 500
 
 ---
 
-The table above shows the average calories for different cooking time and rating intervals. This table can be used as a source to explore if the average cooking time and the rating has anything to do with the number of calories of a recipe.
+The table below shows the average cooking time for different rating intervals. Notice that recipes that have ratings higher than 3 tend to have longer average cooking time in this table. Also notice that recipes without a rating tend to take significantly longer time to prepare comparing to those with ratings.
 
 
 | rating_bins   |   minutes |
@@ -89,17 +91,34 @@ The table above shows the average calories for different cooking time and rating
 | (4.0, 5.0]    |  112.124  |
 | nan           |  228.719  |
 
-The table above shows the average cooking time for different rating intervals. Notice that recipes that have ratings higher than 3 tends to have longer average cooking time in this table. Also notice that recipes without a rating tends to take significantly longer time to prepare comparing to those with ratings.
 
 ---
 
 ## Assessment of Missingness
 
-Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
+### NMAR Analysis
+I found out that there are 3 columns with missing values in my dataset:
+
+|             |   number  of missing entries |
+|:------------|-----------------------------:|
+| name        |                            1 |
+| description |                           70 |
+| rating      |                         2609 |
 
 
+I believe that the description column is NMAR, since people tend to ignore the description when rating a recipe (unless the experience of making/tasting the recipe is so unforgettable that a user would want to comment). Additional data like time it takes to write a description may be able to explain the missingness.
 
+### Missingness Dependency
 
+I was wondering if the missingness of the rating column has anything to do with the number of calories. 
+<iframe src="assets/cal-missing.html" width=800 height=600 frameBorder=0></iframe>
+
+We got a P-value of 5.821920986766768e-09 using K-S Statistic. Our result implies that the missingness of the rating column depends on calories (#) column.
+
+I was also wondering if the missingness of the rating column has anything to do with sodium (PDV) column. 
+<iframe src="assets/sodium-missing.html" width=800 height=600 frameBorder=0></iframe>
+
+We got a P-value of 0.11517155899608289 using K-S Statistic. Our result implies that the missingness of the rating column does not depend on calories (#) column.
 
 ## Hypothesis Testing
 
