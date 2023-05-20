@@ -15,8 +15,9 @@ RAW_recipes.csv contains the recipes, while RAW_interactions.csv contains the re
 
 I was investigating the correlation between the cooking time and average rating of recipes. People 
 
-Number of rows: 83782
-Relevant Columns: 
+##### Number of rows: 83782
+
+##### Relevant Columns: 
 minutes: number of minutes it takes to prepare each recipe
 calories (#): number of calories for each recipe 
 sodium: the amount of sodium used for each recipe 
@@ -30,13 +31,16 @@ rating: average rating for each recipe
 
 <iframe src="assets/cooking-time-uni.html" width=800 height=600 frameBorder=0></iframe>
 
+
 As you can see, most of the recipes take no more than 150 minutes to prepare. For the recipes that take no more than 150 minutes to prepare, most of the them take about 20 to 50 minutes to prepare. However, as shown on the graph, some can take as long as 10000000 to 100000000 minutes to prepare.
 
-### Univariate Analysis
+### Bivariate Analysis
 
 <iframe src="assets/calories-min-scatter.html" width=800 height=600 frameBorder=0></iframe>
 
-As you can see, most of the recipes take no more than 150 minutes to prepare. For the recipes that take no more than 150 minutes to prepare, most of the them take about 20 to 50 minutes to prepare. However, as shown on the graph, some can take as long as 10000000 to 100000000 minutes to prepare.
+As you can see, the bottom-left corner of the graph takes is the most dense part of the scatterplot. Notice that there are some data points at the top-left corner of the plot, meaning that the recipe does not have a lot of calories even though it takes a long time to prepare that recipe. On the other hand, there are some data points at the bottom-right corner of the plot, meaning that the recipe has a lot of calories even though it does not take a long time to prepare that recipe.
+
+Note: Recipes that take more than 500000 minutes to prepare or has more than 500000 calories are not on the scatterplot
 
 ### Aggregate Analysis
 
@@ -50,6 +54,20 @@ As you can see, most of the recipes take no more than 150 minutes to prepare. Fo
 | nan           |           453.324 |        432.27  |         610.069 |          598.55  |           621.055 |            871.246 |             223.967 |               574.578 |                    75.2 |                     nan   |
 
 ---
+
+The table above shows the average calories for different cooking time and rating intervals. This table can be used as a source to explore if the average cooking time and the rating has anything to do with the number of calories of a recipe.
+
+
+| rating_bins   |   minutes |
+|:--------------|----------:|
+| (-0.001, 1.0] |   95.9151 |
+| (1.0, 2.0]    |   94.7684 |
+| (2.0, 3.0]    |   97.0264 |
+| (3.0, 4.0]    |  112.166  |
+| (4.0, 5.0]    |  112.124  |
+| nan           |  228.719  |
+
+The table above shows the average cooking time for different rating intervals. Notice that recipes that have ratings higher than 3 tends to have longer average cooking time in this table. Also notice that recipes without a rating tends to take significantly longer time to prepare comparing to those with ratings.
 
 ---
 
