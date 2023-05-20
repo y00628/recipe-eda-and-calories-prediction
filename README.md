@@ -13,7 +13,9 @@ The data that I have access to is a subset of the raw data used in the original 
 
 RAW_recipes.csv contains the recipes, while RAW_interactions.csv contains the reviews.
 
-I was investigating the correlation between the cooking time and average rating of recipes. People 
+Question to investigate: Is there a correlation between the cooking time and average rating of recipes?
+
+People should care about this dataset bacause a lot of people cook at home, and some of the information from this dataset (nutritional facts, rating, ingredients, etc.) can serve as a huge factor when choosing what to cook for a meal. Specifically, people should care about my question because people can decide what kind of meals to make given their time constraints, should there exist a relationship.
 
 ##### Number of rows: 83782
 
@@ -124,7 +126,23 @@ I was also wondering if the missingness of the rating column has anything to do 
 
 We got a P-value of 0.11517155899608289 using K-S Statistic. Our result implies that the missingness of the rating column does not depend on calories (#) column.
 
-## Hypothesis Testing
+## Hypothesis/Permutation Testing
+
+Null Hypothesis: In the population, the average cooking time of recipes with rating more than 3 and that of recipes with rating no more than 3 have the same distribution, and the observed differences in our samples are due to random chance.
+
+Alternate Hypothesis: In the population, the average cooking time of recipes with rating more than 3 is longer than that of recipes with rating no more than 3, on average. The observed differences in our samples cannot be explained by random chance alone.
+
+Test Statistic: Signed difference in group means
+
+Significance Level: 5%
+
+This statistic is reasonable because not only did I want to know if there exists a difference between the 2 disdtributions, I also wanted to know if one has a lower mean than the other.
+
+5% is a common choice for signnificance level.
+
+<iframe src="assets/permutation-test-rating-min.html" width=800 height=600 frameBorder=0></iframe>
+
+Under the null hypothesis, the chance of us seeing differences as extreme as the observed statistic is close to 60% (way higher than the alpha value of 5%). Thus, we failed to reject the null hypothesis.
 
 
 ---
