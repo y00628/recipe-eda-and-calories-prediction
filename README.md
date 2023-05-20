@@ -47,7 +47,7 @@ Here are the steps I took to clean the data:
 |  4 | 2000 meatloaf                        | 475785 |        90 |          2202916 | 2012-03-06  |        17 |              13 |          267   |                30 |            12 |             12 |              29 |                    48 |                     2 |        5 |
 
 
-Note: 'tags', 'ingredients', 'description', 'steps' columns not shown due to space constriants.
+Note: 'tags', 'ingredients', 'description', 'steps' columns not shown due to space constraints.
 
 ### Univariate Analysis
 
