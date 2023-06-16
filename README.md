@@ -58,4 +58,4 @@ Resulting p-value: 0.35
 Conclusion: 
 Since the p-value (around 35%) is way larger than the threshold 5%, we failed to reject the null hypothesis. Thus, recipes with ratings higher than 3 and recipes with ratings at most 3 have roughly the same R-squared scores, and any differences are due to random chance.
 
-<iframe src="assets/fairness_hypo_test.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fairness_hypo_test_updated.html" width=800 height=600 frameBorder=0></iframe>
