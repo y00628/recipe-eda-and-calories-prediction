@@ -14,6 +14,7 @@ RAW_recipes.csv contains the recipes, while RAW_interactions.csv contains the re
 
 The prediction problem I have is predicting the number of calories for each recipe using certain features like sugar (PDV), ingredients, and total fat (PDV) for example. The type of prediction problem in this case is a regression problem. The response variable here is calories (#), as it is one of the most important nutritional values amongst all the features provided in this dataset. I am using both RMSE and R-squared for my metric, as my prediction problem is a regression problem.
 
+The features used are: ingredients, n_ingredients, n_steps, rating, total fat (PDV), saturated fat (PDV), sodium (PDV), carbohydrates (PDV), protein (PDV), sugar (PDV), and minutes.
 
 ---
 
@@ -36,3 +37,24 @@ The final model's performance is an improvement over the baseline model since th
 
 Baseline Model - RMSE: 266.34, R-squared: 0.842
 Final Model - RMSE: 200.90, R-squared: 0.910
+
+---
+
+## Fairness Evaluation
+
+My choice of Group X and Y are recipes that have ratings higher than 3 and recipes that does not have ratings higher than 3 respectively, as rating does not have that big of an impact on the numer of calories comparing to other variables. For evaluation metric I chose R-squared since the problem I am dealing with is a Regression Problem. 
+
+Below are the details of the permutation test used for model fairness evaluation:
+
+Null Hypothesis: Our model is fair. Recipes with ratings higher than 3 and recipes with ratings at most 3 have roughly the same R-squared scores, and any differences are due to random chance.
+
+Alternate Hypothesis: Our model is unfair. Its R-squared for recipes with ratings at most 3 is lower than its R-sqaured for recipes with ratings higher than 3.
+
+Significance Level: alpha=0.05 (Reject null when p-value is smaller than 0.05)
+
+Resulting p-value: 0.35
+
+Conclusion: 
+Since the p-value (around 35%) is way larger than the threshold 5%, we failed to reject the null hypothesis. Thus, recipes with ratings higher than 3 and recipes with ratings at most 3 have roughly the same R-squared scores, and any differences are due to random chance.
+
+<iframe src="assets/fairness_hypo_test.html" width=800 height=600 frameBorder=0></iframe>
