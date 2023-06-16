@@ -36,6 +36,7 @@ The most optimal values above were found GridSearchCV, with the parameter cv set
 The final model's performance is an improvement over the baseline model since the RMSE of the final model is lower than that of baseline model, and the final model has a higher R-squared than the baseline model. Below describes the performances:
 
 Baseline Model - RMSE: 266.34, R-squared: 0.842
+
 Final Model - RMSE: 200.90, R-squared: 0.910
 
 ---
