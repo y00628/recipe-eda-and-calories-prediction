@@ -1,8 +1,6 @@
 # recipe-eda-and-calories-prediction
 
-# Recipe Dataset Analysis and Calories Prediction
-
-# Part 1: Recipe Dataset Analysi
+# Part 1: Recipe Dataset Analysis
 
 by Yosen Lin
 
