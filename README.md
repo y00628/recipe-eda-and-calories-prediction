@@ -1,6 +1,8 @@
 # recipe-eda-and-calories-prediction
 
-# Recipe Dataset Analysis
+# Recipe Dataset Analysis and Calories Prediction
+
+# Part 1: Recipe Dataset Analysi
 
 by Yosen Lin
 
@@ -147,7 +149,7 @@ Under the null hypothesis, the chance of us seeing differences as extreme as the
 
 ---
 
-# recipe-calories-prediction
+# Part 2: Recipe Calories Prediction
 
 by Yosen Lin
 
