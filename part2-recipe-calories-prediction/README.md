@@ -2,7 +2,7 @@
 
 by Yosen Lin
 
-***Note***: Model Building and Prediction Project (Project 5) for DSC 80 at UCSD
+**_Note_**: Model Building and Prediction Project (Project 5) for DSC 80 at UCSD
 
 ---
 
@@ -25,13 +25,14 @@ For my model, there is one nominal feature (ingredients), while the rest (10) ar
 ---
 
 ## Final Model
+
 In addition to the transformation for the nominal feature ingredients, some new features were transformed version of n_ingredients and n_steps, both of which were transformed using QuantileTransformer, as both of the features are more like discrete variables. Another new feature was the transformation of the rating column with StandardScaler(), as rating does not play that big of a role comparing to other features.
 
-The modeling algorithm I chose was DecisionTreeRegressor(), which is the same as the baseline model. I tuned n_quantiles for both of the transformers in the preprocessing ColumnTransformer and max_depth for DecisionTreeRegressor().The hyperparameters that ended up performing the best are: 
+The modeling algorithm I chose was DecisionTreeRegressor(), which is the same as the baseline model. I tuned n_quantiles for both of the transformers in the preprocessing ColumnTransformer and max_depth for DecisionTreeRegressor().The hyperparameters that ended up performing the best are:
 
 max_depth=11, n_quantiles for n_ingredients=12, n_quantiles for n_steps=9
 
-The most optimal values above were found GridSearchCV, with the parameter cv set to 5. 
+The most optimal values above were found GridSearchCV, with the parameter cv set to 5.
 
 The final model's performance is an improvement over the baseline model since the RMSE of the final model is lower than that of baseline model, and the final model has a higher R-squared than the baseline model. Below describes the performances:
 
@@ -43,7 +44,7 @@ Final Model - RMSE: 200.90, R-squared: 0.910
 
 ## Fairness Evaluation
 
-My choice of Group X and Y are recipes that have ratings higher than 3 and recipes that does not have ratings higher than 3 respectively, as rating does not have that big of an impact on the numer of calories comparing to other variables. For evaluation metric I chose R-squared since the problem I am dealing with is a Regression Problem. 
+My choice of Group X and Y are recipes that have ratings higher than 3 and recipes that does not have ratings higher than 3 respectively, as rating does not have that big of an impact on the numer of calories comparing to other variables. For evaluation metric I chose R-squared since the problem I am dealing with is a Regression Problem.
 
 Below are the details of the permutation test used for model fairness evaluation:
 
@@ -55,7 +56,7 @@ Significance Level: alpha=0.05 (Reject null when p-value is smaller than 0.05)
 
 Resulting p-value: 0.35
 
-Conclusion: 
+Conclusion:
 Since the p-value (around 35%) is way larger than the threshold 5%, we failed to reject the null hypothesis. Thus, recipes with ratings higher than 3 and recipes with ratings at most 3 have roughly the same R-squared scores, and any differences are due to random chance.
 
 <iframe src="assets/fairness_hypo_test_updated.html" width=800 height=600 frameBorder=0></iframe>
