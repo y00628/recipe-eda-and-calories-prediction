@@ -1,5 +1,7 @@
 # recipe-eda-and-calories-prediction
 
+**_Note_**: Combined repo recipe-dataset-analysis and repo recipe-calories-prediction into this new repo
+
 # Part 1: Recipe Dataset Analysis
 
 by Yosen Lin
